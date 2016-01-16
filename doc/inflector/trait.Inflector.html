@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Inflector` trait in crate `inflector`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Inflector">
+
+    <title>inflector::Inflector - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>inflector</a></p><script>window.sidebarCurrent = {name: 'Inflector', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>inflector</a>::<wbr><a class='trait' href=''>Inflector</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-419' class='srclink' href='../src/inflector/lib.rs.html#85-127' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Inflector {
+    fn <a href='#tymethod.to_class_case' class='fnname'>to_class_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_class_case' class='fnname'>is_class_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_camel_case' class='fnname'>to_camel_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_camel_case' class='fnname'>is_camel_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_table_case' class='fnname'>to_table_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_table_case' class='fnname'>is_table_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_snake_case' class='fnname'>to_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_snake_case' class='fnname'>is_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_screaming_snake_case' class='fnname'>to_screaming_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_screaming_snake_case' class='fnname'>is_screaming_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_kebab_case' class='fnname'>to_kebab_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_kebab_case' class='fnname'>is_kebab_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_sentence_case' class='fnname'>to_sentence_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_sentence_case' class='fnname'>is_sentence_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_title_case' class='fnname'>to_title_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_title_case' class='fnname'>is_title_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_upper_case' class='fnname'>to_upper_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_upper_case' class='fnname'>is_upper_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.to_lower_case' class='fnname'>to_lower_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_lower_case' class='fnname'>is_lower_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.ordinalize' class='fnname'>ordinalize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.deordinalize' class='fnname'>deordinalize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.to_foreign_key' class='fnname'>to_foreign_key</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.is_foreign_key' class='fnname'>is_foreign_key</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.demodulize' class='fnname'>demodulize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.deconstantize' class='fnname'>deconstantize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.to_plural' class='fnname'>to_plural</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+    fn <a href='#tymethod.to_singular' class='fnname'>to_singular</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>;
+}</pre>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.to_class_case' class='method stab '><code>fn <a href='#tymethod.to_class_case' class='fnname'>to_class_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_class_case' class='method stab '><code>fn <a href='#tymethod.is_class_case' class='fnname'>is_class_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_camel_case' class='method stab '><code>fn <a href='#tymethod.to_camel_case' class='fnname'>to_camel_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_camel_case' class='method stab '><code>fn <a href='#tymethod.is_camel_case' class='fnname'>is_camel_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_table_case' class='method stab '><code>fn <a href='#tymethod.to_table_case' class='fnname'>to_table_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_table_case' class='method stab '><code>fn <a href='#tymethod.is_table_case' class='fnname'>is_table_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_snake_case' class='method stab '><code>fn <a href='#tymethod.to_snake_case' class='fnname'>to_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_snake_case' class='method stab '><code>fn <a href='#tymethod.is_snake_case' class='fnname'>is_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_screaming_snake_case' class='method stab '><code>fn <a href='#tymethod.to_screaming_snake_case' class='fnname'>to_screaming_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_screaming_snake_case' class='method stab '><code>fn <a href='#tymethod.is_screaming_snake_case' class='fnname'>is_screaming_snake_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_kebab_case' class='method stab '><code>fn <a href='#tymethod.to_kebab_case' class='fnname'>to_kebab_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_kebab_case' class='method stab '><code>fn <a href='#tymethod.is_kebab_case' class='fnname'>is_kebab_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_sentence_case' class='method stab '><code>fn <a href='#tymethod.to_sentence_case' class='fnname'>to_sentence_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_sentence_case' class='method stab '><code>fn <a href='#tymethod.is_sentence_case' class='fnname'>is_sentence_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_title_case' class='method stab '><code>fn <a href='#tymethod.to_title_case' class='fnname'>to_title_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_title_case' class='method stab '><code>fn <a href='#tymethod.is_title_case' class='fnname'>is_title_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_upper_case' class='method stab '><code>fn <a href='#tymethod.to_upper_case' class='fnname'>to_upper_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_upper_case' class='method stab '><code>fn <a href='#tymethod.is_upper_case' class='fnname'>is_upper_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.to_lower_case' class='method stab '><code>fn <a href='#tymethod.to_lower_case' class='fnname'>to_lower_case</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_lower_case' class='method stab '><code>fn <a href='#tymethod.is_lower_case' class='fnname'>is_lower_case</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.ordinalize' class='method stab '><code>fn <a href='#tymethod.ordinalize' class='fnname'>ordinalize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.deordinalize' class='method stab '><code>fn <a href='#tymethod.deordinalize' class='fnname'>deordinalize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.to_foreign_key' class='method stab '><code>fn <a href='#tymethod.to_foreign_key' class='fnname'>to_foreign_key</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.is_foreign_key' class='method stab '><code>fn <a href='#tymethod.is_foreign_key' class='fnname'>is_foreign_key</a>&lt;'a&gt;(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.demodulize' class='method stab '><code>fn <a href='#tymethod.demodulize' class='fnname'>demodulize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.deconstantize' class='method stab '><code>fn <a href='#tymethod.deconstantize' class='fnname'>deconstantize</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.to_plural' class='method stab '><code>fn <a href='#tymethod.to_plural' class='fnname'>to_plural</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3><h3 id='tymethod.to_singular' class='method stab '><code>fn <a href='#tymethod.to_singular' class='fnname'>to_singular</a>&lt;'a&gt;(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h3></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;'c&gt; <a class='trait' href='../inflector/trait.Inflector.html' title='inflector::Inflector'>Inflector</a> for <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></li>
+<li><code>impl&lt;'c&gt; <a class='trait' href='../inflector/trait.Inflector.html' title='inflector::Inflector'>Inflector</a> for <a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></li>
+</ul><script type="text/javascript" async
+                              src="../implementors/inflector/trait.Inflector.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "inflector";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_foreign_key","Determines if a `String` is a foreign_key"],["to_foreign_key","Converts a `String` to a foreign_key"]]});

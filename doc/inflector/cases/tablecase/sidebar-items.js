@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_table_case","Determines if a `String` is table-case"],["to_table_case","Converts a `String` to table-case `String`"]]});

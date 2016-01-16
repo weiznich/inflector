@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `to_camel_case` fn in crate `inflector`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, to_camel_case">
+
+    <title>inflector::cases::camelcase::to_camel_case - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>inflector</a>::<wbr><a href='../index.html'>cases</a>::<wbr><a href='index.html'>camelcase</a></p><script>window.sidebarCurrent = {name: 'to_camel_case', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='../../index.html'>inflector</a>::<wbr><a href='../index.html'>cases</a>::<wbr><a href='index.html'>camelcase</a>::<wbr><a class='fn' href=''>to_camel_case</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-43' class='srclink' href='../../../src/inflector/cases/camelcase/mod.rs.html#90-92' title='goto source code'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn to_camel_case&lt;'a&gt;(non_camelized_string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></pre><div class='docblock'><p>Converts a <code>String</code> to camelCase <code>String</code></p>
+
+<h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1><pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_fooBar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_FOO_BAR_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;FOO_BAR&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_Foo_Bar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;Foo Bar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_foo_bar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;foo_bar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_Foo_space_bar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;Foo bar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_foo_dash_bar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;foo-bar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_FooBar_as_fooBar() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;FooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>inflector</span>::<span class='ident'>cases</span>::<span class='ident'>camelcase</span>::<span class='ident'>to_camel_case</span>;
+
+<span class='comment'>// camelize_FooBar3_as_fooBar3() {</span>
+    <span class='kw'>let</span> <span class='ident'>mock_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;FooBar3&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>expected_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='string'>&quot;fooBar3&quot;</span>.<span class='ident'>to_string</span>();
+    <span class='kw'>let</span> <span class='ident'>asserted_string</span>: <span class='ident'>String</span> <span class='op'>=</span> <span class='ident'>to_camel_case</span>(<span class='ident'>mock_string</span>);
+    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>asserted_string</span> <span class='op'>==</span> <span class='ident'>expected_string</span>);
+</pre>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "inflector";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>

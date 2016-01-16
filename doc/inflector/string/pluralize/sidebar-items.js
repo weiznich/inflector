@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["to_plural","Converts a `String` to pluralized `String`"]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_screaming_snake_case","Determines of a `String` is screaming_snake_case"],["to_screaming_snake_case","Converts a `String` to SCREAMING_SNAKE_CASE `String`"]]});

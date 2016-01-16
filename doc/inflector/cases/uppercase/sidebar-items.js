@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_upper_case","Determines if a `String` is UPPERCASE"],["to_upper_case","Converts a `String` to uppercase `String`"]]});

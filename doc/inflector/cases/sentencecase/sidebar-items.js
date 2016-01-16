@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["is_sentence_case","Determines of a `String` is Sentence case"],["to_sentence_case","Converts a `String` to Sentence case `String`"]]});
